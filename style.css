@@ -45,7 +45,7 @@ body {
 }
 
 .container h3 {
-    font-size: 1.6rem; /* Smaller size for differentiation */
+    font-size: 1.6rem; /* smaller to differentiate from h1 */
     font-weight: 700;
     color: #2c3e50;
     text-align: left;
@@ -74,10 +74,11 @@ body {
 }
 
 .info-section ul {
-    padding-left: 20px;
+    padding-left: 20px;       /* Adjust left padding */
+    margin-left: 0;           /* Remove default left margin */
+    list-style-position: inside; /* Bullets inside text area */
     line-height: 1.8;
     text-align: left;
-    /* Removed display: inline-block; for better list formatting */
 }
 
 button {
