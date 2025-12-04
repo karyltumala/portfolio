@@ -1,3 +1,10 @@
+/* Global box-sizing for easier sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(135deg, #f4f7ff, #e4ecff);
@@ -21,14 +28,14 @@ body {
     background: white;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.6s ease-in-out;
     text-align: center;
 }
 
 .dark-mode .container {
     background: #1c1c1c;
-    box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
 .container h1 {
@@ -38,7 +45,7 @@ body {
 }
 
 .container h3 {
-    font-size: 2.2rem;
+    font-size: 1.6rem; /* Smaller size for differentiation */
     font-weight: 700;
     color: #2c3e50;
     text-align: left;
@@ -70,7 +77,7 @@ body {
     padding-left: 20px;
     line-height: 1.8;
     text-align: left;
-    display: inline-block;
+    /* Removed display: inline-block; for better list formatting */
 }
 
 button {
@@ -83,7 +90,7 @@ button {
     background: #4a76ff;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
@@ -96,6 +103,13 @@ button:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
